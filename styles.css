@@ -1,0 +1,117 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fff; /* Optional: Set a background color */
+    color: #333; /* Default text color */
+}
+
+header {
+    background-color: #008AFF; /* Theme color for header */
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+nav {
+    background-color: #f4f4f4;
+    text-align: center;
+    padding: 10px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+    padding: 10px;
+    margin: 0 5px;
+    display: inline-block;
+    border-bottom: 2px solid transparent;
+    transition: border-bottom 0.3s ease;
+}
+
+nav a:hover {
+    border-bottom: 2px solid #333;
+}
+
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 0 20px;
+}
+
+/* Heading styles */
+h2, h3 {
+    font-weight: bold;
+}
+
+/* Specific heading styles */
+.container p strong {
+    font-weight: bold;
+}
+
+.icon {
+    width: 20px; /* Adjust size as needed */
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+.profile-photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin: 20px auto;
+    display: block;
+}
+
+/* styles.css */
+
+/* Add a class for company names */
+.company-name {
+    font-weight: bold; /* Make the company name bold */
+}
+
+/* Add a class for roles */
+.role {
+    font-style: italic; /* Make the role italic */
+}
+
+/* Add a class for durations */
+.duration {
+    color: #008AFF; /* Use the theme color for durations */
+}
+
+.section {
+    margin-top: 40px;
+}
+
+.section h2 {
+    border-bottom: 2px solid #008AFF; /* Theme color for section headings */
+    padding-bottom: 10px;
+}
+
+.section p {
+    line-height: 1.6;
+}
+
+/* Additional styling for links */
+a {
+    color: #008AFF; /* Theme color for links */
+}
+
+/* Footer styles */
+footer {
+    background-color: #f4f4f4;
+    padding: 20px;
+    text-align: center;
+}
+
+footer p {
+    margin-bottom: 5px;
+    font-style: italic;
+    font-size: 16px;
+}
+
+footer p:last-child {
+    margin-bottom: 0;
+    font-weight: bold;
+}
