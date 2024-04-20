@@ -15,22 +15,32 @@ export default function PersonalProfile() {
       <Container sx={{padding: '10vmin'}}>
         <Box sx={{ border: border }} >
           <Grid container>
-          <Grid xs={12} sx={{ display: { xs: 'block', sm:'none', md: 'none'}, border: border }}>
-            <div style={{ display: 'grid', placeItems: 'center', width: '100%' }}>
-              <AnimatedPic width='50vmin'/>
-            </div>
+            <Grid xs={12} sx={{ display: { xs: 'block', sm:'block', md: 'none'}, border: border }}>
+              <div style={{ display: 'grid', placeItems: 'center', width: '100%' }}>
+                <AnimatedPic width='50vmin'/>
+              </div>
+            </Grid>
+            <Grid xs={12} sx={{ display: { xs: 'block', sm:'block', md: 'block'}, border: border }}>
+              <div style={{ display: 'grid', placeItems: 'center', width: '100%' }}>
+                <h2>Personal Profile</h2>
+              </div>
+            </Grid>
+            <Grid md={8} xs={12} sx={{ border: border }}>
+              <div style={{ display: 'grid', placeItems: 'center' }}>
+                <PersonalInfo/>
+              </div>
+            </Grid>
+            <Grid  md={4} sx={{ display: { xs: 'none', sm: 'none', md: 'block'}, border: border }}>
+              <div style={{ display: 'grid', placeItems: 'start start' }}>
+                <AnimatedPic width='45vmin'/>
+              </div>
+            </Grid>
           </Grid>
-          <Grid sm={6} md={8} xs={12} sx={{ border: border }}>
-            <div style={{ display: 'grid', placeItems: 'center', height: 'calc(100vmin - 33vmin)' }}>
-              <PersonalInfo/>
-            </div>
-          </Grid>
-          <Grid sm={6} md={4} sx={{ display: { xs: 'none', sm: 'block', md: 'block'}, border: border }}>
-            <div style={{ display: 'grid', placeItems: 'center end', height: 'calc(100vmin - 33vmin)' }}>
-              <AnimatedPic width='100%'/>
-            </div>
-          </Grid>
-        </Grid>
+          <Grid xs={12} sx={{ display: { xs: 'block', sm:'block', md: 'block'}, border: border }}>
+              <div style={{ display: 'grid', placeItems: 'center center', width: '100%', textAlign: 'center' }}>
+                <h4><i>Dedicated and adaptable individual with a proactive approach, known for swiftly mastering new skills and delivering efficient results through hard work and strategic thinking</i></h4>
+              </div>
+            </Grid>
         </Box>
       </Container>
     </React.Fragment>
