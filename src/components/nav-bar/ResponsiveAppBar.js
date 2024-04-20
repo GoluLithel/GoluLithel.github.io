@@ -28,23 +28,29 @@ function ResponsiveAppBar({activePanel, handleChangePanel}) {
           <Box sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }}>
             <DrawerPanel open={open} activePanel={activePanel} handleChangePanel={handleChangePanel} toggleDrawer={toggleDrawer} pages={pages}/>
           </Box>
-          <EmojiEmotionsIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 2 }} />
+          <Box sx={{ display: { xs: 'none', md: 'flex' }, mr: 2 }} >
+            <EmojiEmotionsIcon/>
+          </Box>
           <Box sx={{ display: { xs: 'none', md: 'flex' }, mr: 3 }}>
             <NameHeading handleChangePanel={handleChangePanel}/>
           </Box>
           <MenuButtons pages={pages} activePanel={activePanel} handleChangePanel={handleChangePanel}/>
 
           {/* This will display if screen is small */}
-          <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
+          <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' }}}>
             <DrawerPanel open={open} activePanel={activePanel} handleChangePanel={handleChangePanel} toggleDrawer={toggleDrawer} pages={pages}/>
           </Box>
-          <EmojiEmotionsIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} />
+          <Box sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }}>
+            <EmojiEmotionsIcon/>
+          </Box>
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' }, mr: 2 }}>
             <NameHeading handleChangePanel={handleChangePanel}/>
           </Box>
 
           {/* This will display if screen is small & large */}
-          <ProfileAvatar sx={{ flexGrow: 0 }} handleChangePanel={handleChangePanel}/>
+          <Box sx={{ flexGrow: 0 }} >
+            <ProfileAvatar handleChangePanel={handleChangePanel}/>
+          </Box>
         </Toolbar>
       </Container>
     </AppBar>

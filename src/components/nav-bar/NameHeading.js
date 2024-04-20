@@ -9,8 +9,6 @@ export default function NameHeading({handleChangePanel}) {
             component="a"
             href="#app-bar-with-responsive-menu"
             sx={{
-            //   mr: 3,
-            //   display: { xs: 'none', md: 'flex' },
               fontFamily: 'monospace',
               fontWeight: 700,
               fontSize: '1.5rem',

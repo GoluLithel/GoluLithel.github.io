@@ -4,7 +4,7 @@ import Grid from '@mui/material/Grid';
 import CssBaseline from '@mui/material/CssBaseline';
 import Container from '@mui/material/Container';
 import Introduction from './summary/Introduction';
-import AnimatedPic from './display-profile/AnimatedPic';
+import AnimatedPic from '../common-page-component/display-profile/AnimatedPic';
 
 export default function Home() {
   let border = 'solid white 1px';
