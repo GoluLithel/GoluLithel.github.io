@@ -3,7 +3,6 @@ import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
 import CssBaseline from '@mui/material/CssBaseline';
 import Container from '@mui/material/Container';
-import profilePic from '../../../resources/profile-photo.png';
 import Introduction from './summary/Introduction';
 import AnimatedPic from './display-profile/AnimatedPic';
 

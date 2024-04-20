@@ -11,12 +11,16 @@ import MailIcon from '@mui/icons-material/Mail';
 import Avatar from '@mui/material/Avatar';
 import avatarImage from '../../resources/profile-photo.png';
 
-export default function DrawerList({ toggleDrawer, pages }) {
+export default function DrawerList({ activePanel, handleChangePanel, toggleDrawer, pages }) {
+
+  const setPanelPersonalProfile = () => {
+    return handleChangePanel('PersonalProfile');
+  };
 
   return (
     <Box sx={{ width: 250 }} role="presentation" onClick={toggleDrawer(false)}>
       <List>
-        <ListItem key="BHOGENDRA" disablePadding>
+        <ListItem key="BHOGENDRA" onClick={setPanelPersonalProfile} disablePadding>
           <ListItemButton>
             <ListItemIcon>
               <Avatar src={avatarImage} />
@@ -27,16 +31,20 @@ export default function DrawerList({ toggleDrawer, pages }) {
       </List>
       <Divider />
       <List>
-        {pages.map((text, index) => (
-          <ListItem key={text} disablePadding>
-            <ListItemButton>
-              <ListItemIcon>
-                {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-              </ListItemIcon>
-              <ListItemText primary={text} />
-            </ListItemButton>
-          </ListItem>
-        ))}
+        {pages.map((text, index) => {
+          const changePanel = ()=> {handleChangePanel(text)};
+
+          return (
+            <ListItem key={text} disablePadding>
+              <ListItemButton onClick={changePanel}>
+                <ListItemIcon>
+                  {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
+                </ListItemIcon>
+                <ListItemText primary={text} />
+              </ListItemButton>
+            </ListItem>
+          );
+        })}
       </List>
       <Divider />
       <List>

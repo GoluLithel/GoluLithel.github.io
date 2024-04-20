@@ -1,0 +1,25 @@
+import Typography from '@mui/material/Typography';
+
+export default function NameHeading({handleChangePanel}) {
+    return (
+        <Typography
+            onClick={handleChangePanel.bind(null, 'PersonalProfile')}
+            variant="h6"
+            noWrap
+            component="a"
+            href="#app-bar-with-responsive-menu"
+            sx={{
+            //   mr: 3,
+            //   display: { xs: 'none', md: 'flex' },
+              fontFamily: 'monospace',
+              fontWeight: 700,
+              fontSize: '1.5rem',
+              letterSpacing: '.15rem',
+              color: 'inherit',
+              textDecoration: 'none',
+            }}
+          >
+            BHOGENDRA
+          </Typography>
+    );
+}

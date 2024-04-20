@@ -1,16 +1,21 @@
 import * as React from 'react';
+import { useState } from 'react';
 import './App.css';
 import ResponsiveAppBar from './components/nav-bar/ResponsiveAppBar';
 import CurrentSection from './components/sections/CurrentSection';
-// import FullWidthTabs from './components/FullWidthTabs';
 
 function App() {
 
+  const [activePanel, setActivePanel] = useState('Home');
+
+  const handleChangePanel = (panel) => {
+    setActivePanel(panel);
+  };
+
   return (
     <>
-      <ResponsiveAppBar/>
-      <CurrentSection section='Home'/>
-      {/* <FullWidthTabs/> */}
+      <ResponsiveAppBar activePanel={activePanel} handleChangePanel={handleChangePanel} />
+      <CurrentSection activePanel={activePanel}/>
     </>
   );
 }
