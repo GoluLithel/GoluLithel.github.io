@@ -1,1 +1,1 @@
-<?php include './build/index.hml'; ?>
+<?php include './build/index.html'; ?>
