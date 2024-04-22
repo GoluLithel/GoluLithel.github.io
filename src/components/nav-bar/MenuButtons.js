@@ -3,13 +3,13 @@ import Box from '@mui/material/Box';
 
 export default function MenuButtons({pages, activePanel, handleChangePanel}) {
 
-    return (<Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
-    {pages.map((page) => (
+    return (<Box sx={{ flexGrow: 1, display: { xs: 'none', sm:'flex', md: 'flex' } }}>
+    {pages.map((page, index) => (
       <Button
         variant={(page===activePanel)?'contained': ''}
         key={page}
         onClick={handleChangePanel.bind(null, page)}
-        sx={{ my: 2, color: 'white', display: 'block', backgroundColor: (page===activePanel)?'#2E88E0': 'primary' }}
+        sx={{ my: 2, color: 'white', display: {sm: (index>=3)?'none':'flex', md:(index>=5)?'none':'flex', lg:'flex'}, backgroundColor: (page===activePanel)?'#2E88E0': 'primary' }}
       >
         {page}
       </Button>

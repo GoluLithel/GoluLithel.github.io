@@ -9,7 +9,7 @@ import MenuButtons from './MenuButtons';
 import DrawerPanel from '../drawer/DrawerPanel';
 import NameHeading from './NameHeading';
 
-const pages = ['Home', 'Experience', 'Education', 'Skills', 'Certificates', 'Projects', 'Contacts'];
+const pages = ['Home', 'Experience', 'Skills', 'Education', 'Certificates', 'Projects', 'Contacts'];
 
 function ResponsiveAppBar({activePanel, handleChangePanel}) {
 
@@ -25,25 +25,25 @@ function ResponsiveAppBar({activePanel, handleChangePanel}) {
         <Toolbar disableGutters>
 
           {/* This will display if screen is large */}
-          <Box sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }}>
+          <Box sx={{ display: { xs: 'none', sm:'flex', md: 'flex' }, mr: 1 }}>
             <DrawerPanel open={open} activePanel={activePanel} handleChangePanel={handleChangePanel} toggleDrawer={toggleDrawer} pages={pages}/>
           </Box>
-          <Box sx={{ display: { xs: 'none', md: 'flex' }, mr: 2 }} >
+          <Box sx={{ display: { xs: 'none', sm:'flex', md: 'flex' }, mr: 2 }} >
             <EmojiEmotionsIcon/>
           </Box>
-          <Box sx={{ display: { xs: 'none', md: 'flex' }, mr: 3 }}>
+          <Box sx={{ display: { xs: 'none', sm:'flex', md: 'flex' }, mr: 3 }}>
             <NameHeading handleChangePanel={handleChangePanel}/>
           </Box>
           <MenuButtons pages={pages} activePanel={activePanel} handleChangePanel={handleChangePanel}/>
 
           {/* This will display if screen is small */}
-          <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' }}}>
+          <Box sx={{ flexGrow: 1, display: { xs: 'flex', sm:'none', md: 'none' }}}>
             <DrawerPanel open={open} activePanel={activePanel} handleChangePanel={handleChangePanel} toggleDrawer={toggleDrawer} pages={pages}/>
           </Box>
-          <Box sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }}>
+          <Box sx={{ display: { xs: 'flex', sm:'none', md: 'none' }, mr: 1 }}>
             <EmojiEmotionsIcon/>
           </Box>
-          <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' }, mr: 2 }}>
+          <Box sx={{ flexGrow: 1, display: { xs: 'flex', sm:'none', md: 'none' }, mr: 2 }}>
             <NameHeading handleChangePanel={handleChangePanel}/>
           </Box>
 
