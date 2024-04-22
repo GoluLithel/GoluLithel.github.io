@@ -80,7 +80,7 @@ export default function Skills() {
                 placeItems: 'center center',
                 backgroundColor: '#f8f8f8',
                 margin:'8%',
-                width: '75%',
+                width: '90%',
                 aspectRatio: '1/1',
                 boxShadow: '0px 0px 2px rgba(0, 0, 0, 0.5)',
                 padding: '5%',
