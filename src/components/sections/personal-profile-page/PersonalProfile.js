@@ -36,7 +36,7 @@ export default function PersonalProfile() {
               </div>
             </Grid>
             <Grid xs={12} sx={{ display: { xs: 'block', sm:'block', md: 'block'}, border: border }}>
-              <div style={{ display: 'block', placeItems: 'center center', width: '100%', textAlign: 'center' }}>
+              <div style={{ display: 'grid', placeItems: 'center center', width: '100%', textAlign: 'center' }}>
                 <h4><i>Dedicated and adaptable individual with a proactive approach, known for swiftly mastering new skills and delivering efficient results through hard work and strategic thinking</i></h4>
               </div>
             </Grid>
