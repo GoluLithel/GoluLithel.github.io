@@ -7,38 +7,42 @@ import AnimatedPic from '../common-page-component/display-profile/AnimatedPic';
 import PersonalInfo from './PersonalInfo';
 
 export default function PersonalProfile() {
-  let border = 'solid white 1px'; // Just for dubugging design
+  let border = ''; // Just for dubugging design
 
   return (
     <React.Fragment>
       <CssBaseline />
-      <Container sx={{padding: '10vmin'}}>
+      <Container>
         <Box sx={{ border: border }} >
           <Grid container>
-            <Grid xs={12} sx={{ display: { xs: 'block', sm:'block', md: 'none'}, border: border }}>
-              <div style={{ display: 'grid', placeItems: 'center', width: '100%' }}>
-                <AnimatedPic width='50vmin'/>
-              </div>
+            <Grid md={12} sm={12} xs={12} sx={{ display: { sm:'block', md: 'none'}, border: border }}>
+              <Box style={{ display: 'grid', placeItems: 'center center', width: '100%' }}>
+                <AnimatedPic width='50%'/>
+              </Box>
             </Grid>
-            <Grid xs={12} sx={{ display: { xs: 'block', sm:'block', md: 'block'}, border: border }}>
-              <div style={{ display: 'grid', placeItems: 'center', width: '100%' }}>
+            <Grid md={12} sm={12} xs={12} sx={{ display: { xs: 'block', sm:'block', md: 'block'}, border: border }}>
+              <Box style={{ display: 'grid', placeItems: 'center', width: '100%' }}>
                 <h2>Personal Profile</h2>
-              </div>
+              </Box>
             </Grid>
-            <Grid md={8} xs={12} sx={{ border: border }}>
-              <div style={{ display: 'grid', placeItems: 'center' }}>
-                <PersonalInfo/>
-              </div>
+            <Grid md={12} sm={12} xs={12}>
+              <Grid container sx={{ border: border, height: '100%' }}>
+                <Grid md={8} sm={12} xs={12} sx={{border: border, height: '100%' }}>
+                  <Box style={{ display: 'grid', placeItems: 'center center', height: '100%', border: border}}>
+                    <PersonalInfo/>
+                  </Box>
+                </Grid>
+                <Grid md={4} sm={12} xs={12} sx={{ display: { xs: 'none', sm: 'none', md: 'block'}, border: border, placeItems: 'center center', height: '100%'}}>
+                  <Box style={{ display: 'grid', border: border, placeItems: 'center center', height: '100%'}}>
+                    <AnimatedPic width='100%'/>
+                  </Box>
+                </Grid>
+              </Grid>
             </Grid>
-            <Grid  md={4} sx={{ display: { xs: 'none', sm: 'none', md: 'block'}, border: border }}>
-              <div style={{ display: 'grid', placeItems: 'start start' }}>
-                <AnimatedPic width='45vmin'/>
-              </div>
-            </Grid>
-            <Grid xs={12} sx={{ display: { xs: 'block', sm:'block', md: 'block'}, border: border }}>
-              <div style={{ display: 'grid', placeItems: 'center center', width: '100%', textAlign: 'center' }}>
+            <Grid md={12} sm={12} xs={12} sx={{ border: border }}>
+              <Box style={{ display: 'grid', placeItems: 'center center', width: '100%', textAlign: 'center' }}>
                 <h4><i>Dedicated and adaptable individual with a proactive approach, known for swiftly mastering new skills and delivering efficient results through hard work and strategic thinking</i></h4>
-              </div>
+              </Box>
             </Grid>
           </Grid>
         </Box>

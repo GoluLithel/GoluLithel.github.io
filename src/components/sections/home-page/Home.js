@@ -7,29 +7,33 @@ import Introduction from './summary/Introduction';
 import AnimatedPic from '../common-page-component/display-profile/AnimatedPic';
 
 export default function Home() {
-  let border = 'solid white 1px';
+  let border = '';
 
   return (
     <React.Fragment>
       <CssBaseline />
-      <Container sx={{padding: '10vmin'}}>
+      <Container sx={{padding: '10vmin', border: border}}>
         <Box sx={{ border: border }} >
           <Grid container>
-          <Grid xs={12} sx={{ display: { xs: 'block', sm:'none', md: 'none'}, border: border }}>
-            <div style={{ display: 'grid', placeItems: 'center', width: '100%' }}>
-              <AnimatedPic width='50vmin'/>
-            </div>
+          <Grid md={12} sm={12} xs={12} sx={{ display: { sm:'block', md: 'none'}, border: border }}>
+            <Box style={{ display: 'grid', placeItems: 'center center', width: '100%' }}>
+              <AnimatedPic width='50%'/>
+            </Box>
           </Grid>
-          <Grid sm={6} md={8} xs={12} sx={{ border: border }}>
-            <div style={{ display: 'grid', placeItems: 'center', height: 'calc(100vmin - 33vmin)' }}>
-              <Introduction/>
-            </div>
-          </Grid>
-          <Grid sm={6} md={4} sx={{ display: { xs: 'none', sm: 'block', md: 'block'}, border: border }}>
-            <div style={{ display: 'grid', placeItems: 'center end', height: 'calc(100vmin - 33vmin)' }}>
-              <AnimatedPic width='100%'/>
-            </div>
-          </Grid>
+          <Grid md={12} sm={12} xs={12}>
+              <Grid container sx={{ border: border, height: '100%' }}>
+                <Grid md={8} sm={12} xs={12} sx={{border: border, height: '100%' }}>
+                  <Box style={{ display: 'grid', placeItems: 'center center', height: '100%', border: border}}>
+                    <Introduction/>
+                  </Box>
+                </Grid>
+                <Grid md={4} sm={12} xs={12} sx={{ display: { xs: 'none', sm: 'none', md: 'block'}, border: border, placeItems: 'center center', height: '100%'}}>
+                  <Box style={{ display: 'grid', border: border, placeItems: 'center center', height: '100%'}}>
+                    <AnimatedPic width='100%'/>
+                  </Box>
+                </Grid>
+              </Grid>
+            </Grid>
         </Grid>
         </Box>
       </Container>

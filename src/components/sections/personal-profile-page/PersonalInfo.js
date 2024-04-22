@@ -1,5 +1,3 @@
-import { Box } from '@mui/material';
-
 export default function PersonalInfo() {
     const profileData = [
         ['Name', 'Bhogendra Kamble'],
@@ -11,20 +9,16 @@ export default function PersonalInfo() {
     ];
 
     return (
-        <Box style={{ display: 'grid', placeItems: 'center center', height: 'calc(100vmin - 55vmin)' }}>
-            <Box sx={{ fontSize: '1.2rem' }}>
-                <table>
-                    <tbody>
-                        {profileData.map((data, index) => (
-                            <tr key={index}>
-                            <td><strong>{data[0]}:</strong></td>
-                            <td> </td>
-                            <td>{data[1]}</td>
-                            </tr>
-                        ))}
-                    </tbody>
-                </table>
-            </Box>
-        </Box>
+        <table style={{fontSize: '1.2rem'}}>
+            <tbody>
+                {profileData.map((data, index) => (
+                    <tr key={index}>
+                    <td><strong>{data[0]}:</strong></td>
+                    <td> </td>
+                    <td>{data[1]}</td>
+                    </tr>
+                ))}
+            </tbody>
+        </table>
     );
 }

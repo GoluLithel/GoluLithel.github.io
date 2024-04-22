@@ -10,11 +10,7 @@ const AnimatedPic = ({width}) => {
     delay: 500,
   });
 
-  return (
-    <animated.div style={props}>
-      <img src={profilePic} alt="Bhogendra Kamble" style={{ width: width }} />
-    </animated.div>
-  );
+  return (<animated.img style={{...props, width: width}} src={profilePic} alt="Bhogendra Kamble" />);
 };
 
 export default AnimatedPic;
