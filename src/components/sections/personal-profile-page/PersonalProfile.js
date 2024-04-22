@@ -12,7 +12,7 @@ export default function PersonalProfile() {
   return (
     <React.Fragment>
       <CssBaseline />
-      <Container>
+      <Container sx={{padding: '5vmin', border: border}}>
         <Box sx={{ border: border }} >
           <Grid container>
             <Grid md={12} sm={12} xs={12} sx={{ display: { sm:'block', md: 'none'}, border: border }}>
@@ -39,9 +39,10 @@ export default function PersonalProfile() {
                 </Grid>
               </Grid>
             </Grid>
-            <Grid md={12} sm={12} xs={12} sx={{ border: border }}>
-              <Box style={{ display: 'grid', placeItems: 'center center', width: '100%', textAlign: 'center' }}>
-                <h4><i>Dedicated and adaptable individual with a proactive approach, known for swiftly mastering new skills and delivering efficient results through hard work and strategic thinking</i></h4>
+            <Grid md={12} sm={12} xs={12} sx={{ border: border, placeItems: 'center center', width: '100%'}}>
+              <Box style={{ display: 'grid', border: border, placeItems: 'center center', width: '100%'}}>
+                <br/>
+                <p style={{ display: 'grid', border: border, placeItems: 'center center', width: '80%', textAlign: 'center' }}><i>"Dedicated and adaptable individual with a proactive approach, known for swiftly mastering new skills and delivering efficient results through hard work and strategic thinking"</i></p>
               </Box>
             </Grid>
           </Grid>
