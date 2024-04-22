@@ -20,7 +20,7 @@ function ResponsiveAppBar({activePanel, handleChangePanel}) {
 
   return (
     <>
-    <AppBar position="static">
+    <AppBar position="fixed">
       <Container maxWidth="xl">
         <Toolbar disableGutters>
 

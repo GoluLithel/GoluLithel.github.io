@@ -7,7 +7,7 @@ import AnimatedPic from '../common-page-component/display-profile/AnimatedPic';
 import PersonalInfo from './PersonalInfo';
 
 export default function PersonalProfile() {
-  let border = 'solid white 1px';
+  let border = 'solid white 1px'; // Just for dubugging design
 
   return (
     <React.Fragment>
@@ -35,12 +35,12 @@ export default function PersonalProfile() {
                 <AnimatedPic width='45vmin'/>
               </div>
             </Grid>
-          </Grid>
-          <Grid xs={12} sx={{ display: { xs: 'block', sm:'block', md: 'block'}, border: border }}>
-              <div style={{ display: 'grid', placeItems: 'center center', width: '100%', textAlign: 'center' }}>
+            <Grid xs={12} sx={{ display: { xs: 'block', sm:'block', md: 'block'}, border: border }}>
+              <div style={{ display: 'block', placeItems: 'center center', width: '100%', textAlign: 'center' }}>
                 <h4><i>Dedicated and adaptable individual with a proactive approach, known for swiftly mastering new skills and delivering efficient results through hard work and strategic thinking</i></h4>
               </div>
             </Grid>
+          </Grid>
         </Box>
       </Container>
     </React.Fragment>

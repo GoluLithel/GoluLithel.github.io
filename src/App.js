@@ -10,7 +10,7 @@ function App() {
 
   const handleChangePanel = (panel) => {
     setActivePanel(panel);
-  };
+  }; 
 
   return (
     <>

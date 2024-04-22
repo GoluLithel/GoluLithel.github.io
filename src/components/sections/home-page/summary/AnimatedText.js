@@ -12,7 +12,7 @@ const AnimatedText = ({text}) => {
 
   return (
     <div>
-      <h1 style={{ fontSize: '3.5rem'}}>
+      <h1 style={{ fontSize: '3rem'}}>
       {trail.map((props, index) => (
         <animated.span key={index} style={props}>
           {textArray[index]}
