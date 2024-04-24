@@ -27,7 +27,7 @@ export default function PersonalProfile() {
             </Grid>
             <Grid md={12} sm={12} xs={12}>
               <Grid container sx={{ border: border, height: '100%' }}>
-                <Grid md={8} sm={12} xs={12} sx={{border: border, height: '100%' }}>
+                <Grid md={7} sm={12} xs={12} sx={{border: border, height: '100%' }}>
                   <Box style={{ display: 'grid', placeItems: 'center center', height: '100%', border: border}}>
                     <PersonalInfo/>
                   </Box>
