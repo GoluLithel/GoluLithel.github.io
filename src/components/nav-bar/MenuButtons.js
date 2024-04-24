@@ -4,7 +4,7 @@ import Box from '@mui/material/Box';
 export default function MenuButtons({pages, activePanel, handleChangePanel}) {
 
     return (<Box sx={{ flexGrow: 1, display: { xs: 'none', sm:'flex', md: 'flex' } }}>
-    {pages.map((page, index) => (
+    {pages.map(([page, icon], index) => (
       <Button
         variant={(page===activePanel)?'contained': ''}
         key={page}

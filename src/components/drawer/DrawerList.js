@@ -6,16 +6,18 @@ import ListItem from '@mui/material/ListItem';
 import ListItemButton from '@mui/material/ListItemButton';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
-import InboxIcon from '@mui/icons-material/MoveToInbox';
-import MailIcon from '@mui/icons-material/Mail';
 import Avatar from '@mui/material/Avatar';
 import avatarImage from '../../resources/profile-photo.png';
+import FileDownloadIcon from '@mui/icons-material/FileDownload';
+// import ShareIcon from '@mui/icons-material/Share';
+import resumeUrl from '../../resources/resume/resume.pdf';
 
-export default function DrawerList({ activePanel, handleChangePanel, toggleDrawer, pages }) {
+export default function DrawerList({ handleChangePanel, toggleDrawer, pages }) {
 
   const setPanelPersonalProfile = () => {
     return handleChangePanel('PersonalProfile');
   };
+
 
   return (
     <Box sx={{ width: 250 }} role="presentation" onClick={toggleDrawer(false)}>
@@ -31,14 +33,13 @@ export default function DrawerList({ activePanel, handleChangePanel, toggleDrawe
       </List>
       <Divider />
       <List>
-        {pages.map((text, index) => {
+        {pages.map(([text, icon]) => {
           const changePanel = ()=> {handleChangePanel(text)};
-
           return (
             <ListItem key={text} disablePadding>
               <ListItemButton onClick={changePanel}>
                 <ListItemIcon>
-                  {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
+                  {icon}
                 </ListItemIcon>
                 <ListItemText primary={text} />
               </ListItemButton>
@@ -48,14 +49,24 @@ export default function DrawerList({ activePanel, handleChangePanel, toggleDrawe
       </List>
       <Divider />
       <List>
-        <ListItem key="Download Resume" disablePadding>
+        <a href={resumeUrl} style={{textDecoration:'none', color: 'inherit' }} download="Resume_BhogendraKamble.pdf">
+          <ListItem key="Download Resume" disablePadding>
+            <ListItemButton>
+              <ListItemIcon>
+                <FileDownloadIcon />
+              </ListItemIcon>
+              <ListItemText primary="Download Resume" />
+            </ListItemButton>
+          </ListItem>
+        </a>
+        {/* <ListItem key="Share" disablePadding>
           <ListItemButton>
             <ListItemIcon>
-              <InboxIcon />
+              <ShareIcon />
             </ListItemIcon>
-            <ListItemText primary="Download Resume" />
+            <ListItemText primary="Share" />
           </ListItemButton>
-        </ListItem>
+        </ListItem> */}
       </List>
     </Box>
   );

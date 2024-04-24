@@ -17,13 +17,21 @@ export default function Education() {
           <Box sx={{ marginBottom: '20px', borderBottom: '1px solid #ccc', paddingBottom: '5%', paddingTop: '1%' }}>
             <Box component="h2" sx={{ fontSize: '1.2rem', marginBottom: '5px' }}>M.C.A. (Master of Computer Application)</Box>
             <Box sx={{ fontSize: '0.8rem', fontStyle: 'italic', textAlign: 'right' }}>06/2017 - 06/2020</Box>
-            <Box component="h3" sx={{ fontSize: '1rem', marginBottom: '0px' }}>Sardar Patel Institute of Technology, Mumbai</Box>
-            <Box sx={{ fontSize: '0.9rem' }}><strong>Percentage: </strong>78.6 / 100</Box>
+            <Box component="p" sx={{ fontSize: '1rem', marginBottom: '0px' }}>
+              <a rel="noreferrer" target='_blank' href='https://www.spit.ac.in/'>
+                Sardar Patel Institute of Technology, Mumbai
+              </a>
+            </Box>
+            <Box sx={{ fontSize: '0.9rem' }}><strong>Percentage: </strong>78.6% / 100%</Box>
           </Box> 
           <Box sx={{ marginBottom: '20px', borderBottom: '1px solid #ccc', paddingBottom: '5%' }}>
             <Box component="h2" sx={{ fontSize: '1.2rem', marginBottom: '5px' }}>B.Sc. (Mathematics, Computer Science & Physics)</Box>
             <Box sx={{ fontSize: '0.8rem', fontStyle: 'italic', textAlign: 'right' }}>07/2014 - 05/2017</Box>
-            <Box component="h3" sx={{ fontSize: '1rem', marginBottom: '0px' }}>Hislop College, Nagpur</Box>
+            <Box component="p" sx={{ fontSize: '1rem', marginBottom: '0px' }}>
+              <a rel="noreferrer" target='_blank' href='https://hislopcollege.ac.in/'>
+                Hislop College, Nagpur
+              </a>
+            </Box>
             <Box sx={{ fontSize: '0.9rem' }}><strong>Percentage: </strong>73.0% / 100%</Box>
           </Box>
         </Box>
