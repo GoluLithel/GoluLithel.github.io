@@ -3,7 +3,7 @@ import Typography from '@mui/material/Typography';
 export default function NameHeading({handleChangePanel}) {
     return (
         <Typography
-            onClick={handleChangePanel.bind(null, 'PersonalProfile')}
+            onClick={handleChangePanel.bind(null, 'Home')}
             variant="h6"
             noWrap
             component="a"

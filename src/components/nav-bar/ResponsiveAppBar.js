@@ -15,6 +15,7 @@ import HandymanIcon from '@mui/icons-material/Handyman';
 import WorkspacePremiumIcon from '@mui/icons-material/WorkspacePremium';
 import FeaturedPlayListIcon from '@mui/icons-material/FeaturedPlayList';
 import CallIcon from '@mui/icons-material/Call';
+import './ResponsiveAppBar.css';
 
 const pages = [
   ['Home', <HomeIcon/>],
@@ -44,7 +45,7 @@ function ResponsiveAppBar({activePanel, openDownload, handleChangePanel, handleD
             <DrawerPanel open={open} openDownload={openDownload} handleChangePanel={handleChangePanel} toggleDrawer={toggleDrawer} pages={pages} handleDownloadOpen={handleDownloadOpen}/>
           </Box>
           <Box sx={{ display: { xs: 'none', sm:'flex', md: 'flex' }, mr: 2 }} onClick={handleGratitudeOpen}>
-            <EmojiEmotionsIcon/>
+            <EmojiEmotionsIcon className='spin-animation'/>
           </Box>
           <Box sx={{ display: { xs: 'none', sm:'flex', md: 'flex' }, mr: 3 }}>
             <NameHeading handleChangePanel={handleChangePanel}/>
@@ -56,7 +57,7 @@ function ResponsiveAppBar({activePanel, openDownload, handleChangePanel, handleD
             <DrawerPanel open={open} activePanel={activePanel} handleChangePanel={handleChangePanel} toggleDrawer={toggleDrawer} pages={pages}/>
           </Box>
           <Box sx={{ display: { xs: 'flex', sm:'none', md: 'none' }, mr: 1 }} onClick={handleGratitudeOpen}>
-            <EmojiEmotionsIcon/>
+            <EmojiEmotionsIcon className='spin-animation'/>
           </Box>
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', sm:'none', md: 'none' }, mr: 2 }}>
             <NameHeading handleChangePanel={handleChangePanel}/>
