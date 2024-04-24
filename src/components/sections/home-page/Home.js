@@ -5,11 +5,19 @@ import CssBaseline from '@mui/material/CssBaseline';
 import Container from '@mui/material/Container';
 import Introduction from './summary/Introduction';
 import AnimatedPic from '../common-page-component/display-profile/AnimatedPic';
+import Projects from '../Projects-page/Projects';
+import Certificates from '../certificates-page/Certificates';
+import Contacts from '../contacts-page/Contacts';
+import Education from '../education-page/Education';
+import Experience from '../experience-page/Experience';
+import PersonalProfile from '../personal-profile-page/PersonalProfile';
+import Skills from '../skills-page/Skills';
 
 export default function Home() {
   let border = '';
 
   return (
+    <>
     <React.Fragment>
       <CssBaseline />
       <Container sx={{padding: '10vmin', border: border}}>
@@ -38,5 +46,13 @@ export default function Home() {
         </Box>
       </Container>
     </React.Fragment>
+    <Experience/>
+    <Skills/>
+    <Projects/>
+    <Certificates/>
+    <Education/>
+    <PersonalProfile/>
+    <Contacts/>
+    </>
   );
 }
