@@ -67,7 +67,7 @@ export default function Skills() {
         <Grid container>
           <Grid md={12} sm={12} xs={12} sx={{ display: { xs: 'block', sm:'block', md: 'block'}, border: border }}>
             <Box style={{ display: 'grid', placeItems: 'center', width: '100%' }}>
-              <h1 style={{ textShadow: '0px 0px 2px rgba(0, 0, 0, 0.5)'}}>Skills</h1>
+              <h1>Skills</h1>
             </Box>
           </Grid>
 

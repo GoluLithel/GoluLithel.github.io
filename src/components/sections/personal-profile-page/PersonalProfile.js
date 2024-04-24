@@ -22,7 +22,7 @@ export default function PersonalProfile() {
             </Grid>
             <Grid md={12} sm={12} xs={12} sx={{ display: { xs: 'block', sm:'block', md: 'block'}, border: border }}>
               <Box style={{ display: 'grid', placeItems: 'center', width: '100%' }}>
-                <h2>Personal Profile</h2>
+                <h1>Personal Profile</h1>
               </Box>
             </Grid>
             <Grid md={12} sm={12} xs={12}>

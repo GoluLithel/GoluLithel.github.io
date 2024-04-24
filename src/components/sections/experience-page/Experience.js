@@ -11,7 +11,7 @@ export default function Experience() {
       <CssBaseline />
       <Container sx={{padding: '5vmin'}}>
         <Box style={{ placeItems: 'center center', width: '100%' }}>
-          <h1 style={{ textShadow: '0px 0px 2px rgba(0, 0, 0, 0.5)', placeItems: 'center center', textAlign:'center', width: '100%'}}>Work Experience</h1>
+          <h1 style={{ placeItems: 'center center', textAlign:'center', width: '100%'}}>Work Experience</h1>
         </Box>
         <Box sx={{ border: border, maxWidth: 800, margin: 'auto', padding: '20px' }}>
           <Box sx={{ borderBottom: '1px solid #ccc', paddingBottom: '10px', marginBottom: '20px' }}>
