@@ -12,7 +12,7 @@ export default function PersonalProfile() {
   return (
     <React.Fragment>
       <CssBaseline />
-      <Container sx={{padding: '5vmin', border: border}}>
+      <Container sx={{padding: '5vmin', minHeight: '100vh', border: border}}>
         <Box sx={{ border: border }} >
           <Grid container>
             <Grid md={12} sm={12} xs={12} sx={{ display: { sm:'block', md: 'none'}, border: border }}>

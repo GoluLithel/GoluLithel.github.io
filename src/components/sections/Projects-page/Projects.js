@@ -9,7 +9,7 @@ export default function Projects() {
     return (
       <React.Fragment>
       <CssBaseline />
-      <Container sx={{padding: '5vmin'}}>
+      <Container sx={{padding: '5vmin', minHeight: '100vh'}}>
         <Box style={{ placeItems: 'center center', width: '100%' }}>
           <h1 style={{ placeItems: 'center center', textAlign:'center', width: '100%'}}>My Projects</h1>
         </Box>

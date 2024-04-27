@@ -63,7 +63,7 @@ export default function Skills() {
     return (
     <React.Fragment>
       <CssBaseline />
-      <Container sx={{padding: '5vmin', width:'90%'}}>
+      <Container sx={{padding: '5vmin', minHeight: '100vh', width:'90%'}}>
         <Grid container>
           <Grid md={12} sm={12} xs={12} sx={{ display: { xs: 'block', sm:'block', md: 'block'}, border: border }}>
             <Box style={{ display: 'grid', placeItems: 'center', width: '100%' }}>
