@@ -1,7 +1,7 @@
 import React from 'react';
 import { useTrail, animated } from 'react-spring';
 
-const AnimatedText = ({text}) => {
+const AnimatedText = ({ text }) => {
   const textArray = text.split('');
 
   const trail = useTrail(textArray.length, {
@@ -12,12 +12,12 @@ const AnimatedText = ({text}) => {
 
   return (
     <div>
-      <h1 style={{ fontSize: '3rem'}}>
-      {trail.map((props, index) => (
-        <animated.span key={index} style={props}>
-          {textArray[index]}
-        </animated.span>
-      ))}
+      <h1 style={{ fontSize: '3rem' }}>
+        {trail.map((props, index) => (
+          <animated.span key={index} style={props}>
+            {textArray[index]}
+          </animated.span>
+        ))}
       </h1>
     </div>
   );

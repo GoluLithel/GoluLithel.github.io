@@ -4,18 +4,18 @@ import CssBaseline from '@mui/material/CssBaseline';
 import Container from '@mui/material/Container';
 
 export default function Experience() {
-    let border = 'solid white 1px';
+  let border = 'solid white 1px';
 
-    return (
+  return (
     <React.Fragment>
       <CssBaseline />
-      <Container sx={{padding: '5vmin', minHeight: '100vh'}}>
+      <Container sx={{ padding: '5vmin', minHeight: '100vh' }}>
         <Box style={{ placeItems: 'center center', width: '100%' }}>
-          <h1 style={{ placeItems: 'center center', textAlign:'center', width: '100%'}}>Work Experience</h1>
+          <h1 style={{ placeItems: 'center center', textAlign: 'center', width: '100%' }}>Work Experience</h1>
         </Box>
         <Box sx={{ border: border, maxWidth: 800, margin: 'auto', padding: '20px' }}>
           <Box sx={{ borderBottom: '1px solid #ccc', paddingBottom: '10px', marginBottom: '20px' }}>
-            <Box component="h2" sx={{ fontSize: '1.2rem', marginBottom: '10px' }}>IBM India Pvt Ltd,<br/>Application Developer, Pune</Box>
+            <Box component="h2" sx={{ fontSize: '1.2rem', marginBottom: '10px' }}>IBM India Pvt Ltd,<br />Application Developer, Pune</Box>
             <Box sx={{ fontSize: '0.9rem' }}>04/2021 - Present</Box>
           </Box>
           <Box>
@@ -26,9 +26,9 @@ export default function Experience() {
               <li>Designed and created user-friendly UI pages with React.js to utilize Node.js for server-side scripting and asynchronous programming, enabling real-time data processing and event-driven functionality.</li>
             </ul>
           </Box>
-          <br/>
+          <br />
           <Box sx={{ borderBottom: '1px solid #ccc', paddingBottom: '10px', marginBottom: '20px', marginTop: '20px' }}>
-            <Box component="h2" sx={{ fontSize: '1.2rem', marginBottom: '10px' }}>Fractal India Pvt Ltd,<br/>Project Intern, Mumbai</Box>
+            <Box component="h2" sx={{ fontSize: '1.2rem', marginBottom: '10px' }}>Fractal India Pvt Ltd,<br />Project Intern, Mumbai</Box>
             <Box sx={{ fontSize: '0.9rem' }}>01/2020 - 07/2020</Box>
           </Box>
           <Box>
@@ -43,5 +43,5 @@ export default function Experience() {
         </Box>
       </Container>
     </React.Fragment>
-    );
+  );
 }

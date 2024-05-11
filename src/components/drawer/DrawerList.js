@@ -2,71 +2,46 @@ import * as React from 'react';
 import Box from '@mui/material/Box';
 import List from '@mui/material/List';
 import Divider from '@mui/material/Divider';
-import ListItem from '@mui/material/ListItem';
-import ListItemButton from '@mui/material/ListItemButton';
-import ListItemIcon from '@mui/material/ListItemIcon';
-import ListItemText from '@mui/material/ListItemText';
 import Avatar from '@mui/material/Avatar';
 import avatarImage from '../../resources/profile-photo.png';
 import FileDownloadIcon from '@mui/icons-material/FileDownload';
-// import ShareIcon from '@mui/icons-material/Share';
+import ShareIcon from '@mui/icons-material/Share';
 import resumeUrl from '../../resources/resume/resume.pdf';
+import { handleShareResume, handleShareLink } from '../../utils/handleShare';
+import DrawerItem from './drawer-items/DrawerItem';
 
-export default function DrawerList({ handleChangePanel, toggleDrawer, pages }) {
-
-  const setPanelPersonalProfile = () => {
-    return handleChangePanel('PersonalProfile');
-  };
-
+export default function DrawerList({ handleChangePanel, handleDownloadOpen, toggleDrawer, pages }) {
 
   return (
-    <Box sx={{ width: 250 }} role="presentation" onClick={toggleDrawer(false)}>
+    <Box sx={{ width: 250 }} role="presentation" onClick={() => toggleDrawer(false)}>
       <List>
-        <ListItem key="BHOGENDRA" onClick={setPanelPersonalProfile} disablePadding>
-          <ListItemButton>
-            <ListItemIcon>
-              <Avatar src={avatarImage} />
-            </ListItemIcon>
-            <ListItemText primary="BHOGENDRA" />
-          </ListItemButton>
-        </ListItem>
+        <DrawerItem text="Bhogendra" onClickItem={() => handleChangePanel('PersonalProfile')}>
+          <Avatar src={avatarImage} />
+        </DrawerItem>
       </List>
       <Divider />
       <List>
         {pages.map(([text, icon]) => {
-          const changePanel = ()=> {handleChangePanel(text)};
           return (
-            <ListItem key={text} disablePadding>
-              <ListItemButton onClick={changePanel}>
-                <ListItemIcon>
-                  {icon}
-                </ListItemIcon>
-                <ListItemText primary={text} />
-              </ListItemButton>
-            </ListItem>
+            <DrawerItem text={text} onClickItem={() => handleChangePanel(text)}>
+              {icon}
+            </DrawerItem>
           );
         })}
       </List>
       <Divider />
       <List>
-        <a href={resumeUrl} style={{textDecoration:'none', color: 'inherit' }} download="Resume_BhogendraKamble.pdf">
-          <ListItem key="Download Resume" disablePadding>
-            <ListItemButton>
-              <ListItemIcon>
-                <FileDownloadIcon />
-              </ListItemIcon>
-              <ListItemText primary="Download Resume" />
-            </ListItemButton>
-          </ListItem>
+        <a href={resumeUrl} style={{ textDecoration: 'none', color: 'inherit' }} download="Resume_BhogendraKamble.pdf">
+          <DrawerItem text="Download Resume" onClickItem={handleDownloadOpen}>
+            <FileDownloadIcon />
+          </DrawerItem>
         </a>
-        {/* <ListItem key="Share" disablePadding>
-          <ListItemButton>
-            <ListItemIcon>
-              <ShareIcon />
-            </ListItemIcon>
-            <ListItemText primary="Share" />
-          </ListItemButton>
-        </ListItem> */}
+        <DrawerItem text="Share Resume" onClickItem={handleShareResume}>
+          <ShareIcon />
+        </DrawerItem>
+        <DrawerItem text="Share Link" onClickItem={handleShareLink}>
+          <ShareIcon />
+        </DrawerItem>
       </List>
     </Box>
   );

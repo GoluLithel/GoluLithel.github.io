@@ -8,25 +8,25 @@ import InvalidSection from './invalid-page/InvalidSection';
 import PersonalProfile from './personal-profile-page/PersonalProfile';
 import Skills from './skills-page/Skills';
 
-export default function CurrentSection({activePanel}) {
+export default function CurrentSection({ activePanel }) {
     switch (activePanel) {
         case 'Home':
-            return (<Home/>);
+            return (<Home />);
         case 'Experience':
-            return (<Experience/>);
+            return (<Experience />);
         case 'Education':
-            return (<Education/>);
+            return (<Education />);
         case 'Skills':
-            return (<Skills/>);
+            return (<Skills />);
         case 'Certificates':
-            return (<Certificates/>);
+            return (<Certificates />);
         case 'Projects':
-            return (<Projects/>);
+            return (<Projects />);
         case 'Contacts':
-            return (<Contacts/>);
+            return (<Contacts />);
         case 'PersonalProfile':
-            return (<PersonalProfile/>);
+            return (<PersonalProfile />);
         default:
-            return (<InvalidSection/>)
+            return (<InvalidSection />)
     }
 }

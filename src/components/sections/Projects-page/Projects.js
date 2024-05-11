@@ -4,19 +4,19 @@ import CssBaseline from '@mui/material/CssBaseline';
 import Container from '@mui/material/Container';
 
 export default function Projects() {
-    let border = 'solid white 1px';
+  let border = 'solid white 1px';
 
-    return (
-      <React.Fragment>
+  return (
+    <React.Fragment>
       <CssBaseline />
-      <Container sx={{padding: '5vmin', minHeight: '100vh'}}>
+      <Container sx={{ padding: '5vmin', minHeight: '100vh' }}>
         <Box style={{ placeItems: 'center center', width: '100%' }}>
-          <h1 style={{ placeItems: 'center center', textAlign:'center', width: '100%'}}>My Projects</h1>
+          <h1 style={{ placeItems: 'center center', textAlign: 'center', width: '100%' }}>My Projects</h1>
         </Box>
         <Box sx={{ border: border, maxWidth: 800, margin: 'auto', padding: '20px' }}>
           <Box sx={{ borderBottom: '1px solid #ccc', paddingBottom: '10px', marginBottom: '20px' }}>
             <Box component="h1" sx={{ fontSize: '1.5rem', marginBottom: '10px' }}>Personal Portfolio</Box>
-            <Box sx={{ fontSize: '0.9rem', marginBottom:'10px' }}><strong>Technology used:</strong> React.js, Material UI components, JSX, CSS, and JavaScript.</Box>
+            <Box sx={{ fontSize: '0.9rem', marginBottom: '10px' }}><strong>Technology used:</strong> React.js, Material UI components, JSX, CSS, and JavaScript.</Box>
             <Box sx={{ fontSize: '0.9rem' }}>
               <a rel="noreferrer" target='_blank' href='https://golulithel.github.io/'>
                 Explore My Portfolio Here.
@@ -42,5 +42,5 @@ export default function Projects() {
         </Box>
       </Container>
     </React.Fragment>
-    );
+  );
 }

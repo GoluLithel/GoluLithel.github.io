@@ -6,28 +6,28 @@ import Container from '@mui/material/Container';
 import ContactInfo from './ContactInfo';
 
 export default function Contacts() {
-    let border = 'solid white 1px';
+  let border = 'solid white 1px';
 
-    return (
+  return (
     <React.Fragment>
       <CssBaseline />
-      <Container sx={{padding: '5vmin', minHeight: '100vh'}}>
-      <Box style={{ placeItems: 'center center', width: '100%' }}>
-        <h1 style={{ placeItems: 'center center', textAlign:'center', width: '100%'}}>Contact Details</h1>
-      </Box>
-      <Box sx={{ maxWidth: 900, margin: 'auto', padding: '20px', border: border }}>
-        <ContactInfo/>
-      </Box>
-      <Box style={{ placeItems: 'center center', width: '100%', textAlign: 'center', marginTop: '20px'}}>
-        <strong style={{fontSize: '2.2rem'}}>Follow Me: </strong>&nbsp;&nbsp;&nbsp;
-        <a rel="noreferrer" target='_blank' href='https://www.facebook.com/bhogendra.kamble'>
-          <FaFacebook style={{fontSize: '2rem'}}/>
-        </a>&nbsp;&nbsp;&nbsp;
-        <a rel="noreferrer" target='_blank' href='https://www.instagram.com/bhogendra_kamble/'>
-          <FaInstagram style={{fontSize: '2rem'}}/>
-        </a>
-      </Box>
+      <Container sx={{ padding: '5vmin', minHeight: '100vh' }}>
+        <Box style={{ placeItems: 'center center', width: '100%' }}>
+          <h1 style={{ placeItems: 'center center', textAlign: 'center', width: '100%' }}>Contact Details</h1>
+        </Box>
+        <Box sx={{ maxWidth: 900, margin: 'auto', padding: '20px', border: border }}>
+          <ContactInfo />
+        </Box>
+        <Box style={{ placeItems: 'center center', width: '100%', textAlign: 'center', marginTop: '20px' }}>
+          <strong style={{ fontSize: '2.2rem' }}>Follow Me: </strong>&nbsp;&nbsp;&nbsp;
+          <a rel="noreferrer" target='_blank' href='https://www.facebook.com/bhogendra.kamble'>
+            <FaFacebook style={{ fontSize: '2rem' }} />
+          </a>&nbsp;&nbsp;&nbsp;
+          <a rel="noreferrer" target='_blank' href='https://www.instagram.com/bhogendra_kamble/'>
+            <FaInstagram style={{ fontSize: '2rem' }} />
+          </a>
+        </Box>
       </Container>
     </React.Fragment>
-    );
+  );
 }

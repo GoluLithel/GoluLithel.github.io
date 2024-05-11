@@ -6,19 +6,19 @@ import awsLogo from '../../../resources/certificates-logo/awsLogo.png';
 import cbdeLogo from '../../../resources/certificates-logo/cbdeLogo.png';
 
 export default function Certificates() {
-    // let border = 'solid white 1px';
+  // let border = 'solid white 1px';
 
-    return (
+  return (
     <React.Fragment>
       <CssBaseline />
-      <Container sx={{padding: '5vmin', minHeight: '100vh'}}>
+      <Container sx={{ padding: '5vmin', minHeight: '100vh' }}>
         <Box style={{ placeItems: 'center center', width: '100%' }}>
-          <h1 style={{ placeItems: 'center center', textAlign:'center', width: '100%'}}>My Certificates</h1>
+          <h1 style={{ placeItems: 'center center', textAlign: 'center', width: '100%' }}>My Certificates</h1>
         </Box>
         <Box sx={{ maxWidth: 600, margin: 'auto', padding: '20px' }}>
           <Box sx={{ display: 'flex', alignItems: 'center', borderBottom: '1px solid #ccc', paddingBottom: '5%' }}>
             <img src={awsLogo} alt="AWS Certified Cloud Practitioner Logo" style={{ width: '100px', marginRight: '20px' }} />
-            <Box sx={{paddingLeft: '5%'}}>
+            <Box sx={{ paddingLeft: '5%' }}>
               <Box component="h3" sx={{ fontSize: '1rem', marginBottom: '5px' }}>AWS Certified Cloud Practitioner</Box>
               <Box sx={{ fontSize: '0.9rem' }}>Amazon Web Services (AWS)</Box>
               <Box sx={{ fontSize: '0.9rem' }}>Issued Aug 2023 - Expires Aug 2026</Box>
@@ -28,7 +28,7 @@ export default function Certificates() {
 
           <Box sx={{ display: 'flex', alignItems: 'center', borderBottom: '1px solid #ccc', paddingBottom: '5%' }}>
             <img src={cbdeLogo} alt="CBDE Logo" style={{ width: '100px', marginRight: '20px' }} />
-            <Box sx={{paddingLeft: '5%'}}>
+            <Box sx={{ paddingLeft: '5%' }}>
               <Box component="h3" sx={{ fontSize: '1rem', marginBottom: '5px' }}>BTA - Certified Blockchain Developer - Ethereum (CBDE)</Box>
               <Box sx={{ fontSize: '0.9rem' }}>Blockchain Training Alliance</Box>
               <Box sx={{ fontSize: '0.9rem' }}>Issued Jul 2022 - Expires Jul 2024</Box>
@@ -38,5 +38,5 @@ export default function Certificates() {
         </Box>
       </Container>
     </React.Fragment>
-    );
+  );
 }

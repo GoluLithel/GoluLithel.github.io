@@ -4,14 +4,14 @@ import Tooltip from '@mui/material/Tooltip';
 import Zoom from '@mui/material/Zoom';
 import IconButton from '@mui/material/IconButton';
 
-export default function ProfileAvatar({handleChangePanel}) {
+export default function ProfileAvatar({ handleChangePanel }) {
     return (
         <Tooltip TransitionComponent={Zoom} title="Personal Profile" arrow>
-            <IconButton 
-            sx={{ p: 0 }}
-            onClick={handleChangePanel.bind(null, 'PersonalProfile')}
+            <IconButton
+                sx={{ p: 0 }}
+                onClick={() => handleChangePanel('PersonalProfile')}
             >
-            <Avatar src={avatarImage} />
+                <Avatar src={avatarImage} />
             </IconButton>
         </Tooltip>
     );

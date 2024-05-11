@@ -4,14 +4,14 @@ import CssBaseline from '@mui/material/CssBaseline';
 import Container from '@mui/material/Container';
 
 export default function Education() {
-    // let border = 'solid white 1px';
+  // let border = 'solid white 1px';
 
-    return (
+  return (
     <React.Fragment>
       <CssBaseline />
-      <Container sx={{padding: '5vmin', minHeight: '100vh'}}>
+      <Container sx={{ padding: '5vmin', minHeight: '100vh' }}>
         <Box style={{ placeItems: 'center center', width: '100%' }}>
-          <h1 style={{ placeItems: 'center center', textAlign:'center', width: '100%'}}>My Education</h1>
+          <h1 style={{ placeItems: 'center center', textAlign: 'center', width: '100%' }}>My Education</h1>
         </Box>
         <Box sx={{ maxWidth: 600, margin: 'auto', padding: '20px' }}>
           <Box sx={{ marginBottom: '20px', borderBottom: '1px solid #ccc', paddingBottom: '5%', paddingTop: '1%' }}>
@@ -23,7 +23,7 @@ export default function Education() {
               </a>
             </Box>
             <Box sx={{ fontSize: '0.9rem' }}><strong>Percentage: </strong>78.6% / 100%</Box>
-          </Box> 
+          </Box>
           <Box sx={{ marginBottom: '20px', borderBottom: '1px solid #ccc', paddingBottom: '5%' }}>
             <Box component="h2" sx={{ fontSize: '1.2rem', marginBottom: '5px' }}>B.Sc. (Mathematics, Computer Science & Physics)</Box>
             <Box sx={{ fontSize: '0.8rem', fontStyle: 'italic', textAlign: 'right' }}>07/2014 - 05/2017</Box>
@@ -37,5 +37,5 @@ export default function Education() {
         </Box>
       </Container>
     </React.Fragment>
-    );
+  );
 }

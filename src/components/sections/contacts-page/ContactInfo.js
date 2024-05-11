@@ -12,27 +12,27 @@ export default function ContactInfo() {
         [<FaEnvelope />, ' Email Id:', 'mailto:golukamble123@gmail.com', 'golukamble123@gmail.com'],
         [<FaGithub />, ' GitHub Profile:', 'https://github.com/GoluLithel', 'github.com/GoluLithel'],
         [<FaLinkedin />, ' LinkedIn Profile:', 'https://www.linkedin.com/in/bhogendra-k-435258216/', 'linkedin.com/in/bhogendra-k-435258216/']
-      ];
+    ];
 
     return (
         <TableContainer>
             <Table>
                 <TableBody>
-                {contactDetails.map((data, index) => (
-                    <>
-                    <TableRow key={index}>
-                        <TableCell sx={{ display: {md: 'none', sm:'none', xs: 'block'}, fontSize: '1.2rem', border: 'none', marginBottom:'-10px', paddingBottom:'0px'}}>{data[0]}&nbsp;&nbsp;&nbsp;<strong>{data[1]}</strong></TableCell>
-                    </TableRow>
-                    <TableRow key={index} sx={{borderBottom: 'solid #eeeeee 1px', paddingBottom: '50px'}}>
-                        <TableCell sx={{ display: {md: 'block', sm:'block', xs: 'none'}, fontSize: '1.2rem', border: 'none'}}>{data[0]}&nbsp;&nbsp;&nbsp;<strong>{data[1]}</strong></TableCell>
-                        <TableCell style={{fontSize: '1.2rem', border: 'none'}}>
-                            <a href={data[2]}>
-                                {data[3]}
-                            </a>
-                        </TableCell>
-                    </TableRow>
-                    </>
-                ))}
+                    {contactDetails.map((data, index) => (
+                        <>
+                            <TableRow key={index}>
+                                <TableCell sx={{ display: { md: 'none', sm: 'none', xs: 'block' }, fontSize: '1.2rem', border: 'none', marginBottom: '-10px', paddingBottom: '0px' }}>{data[0]}&nbsp;&nbsp;&nbsp;<strong>{data[1]}</strong></TableCell>
+                            </TableRow>
+                            <TableRow key={index} sx={{ borderBottom: 'solid #eeeeee 1px', paddingBottom: '50px' }}>
+                                <TableCell sx={{ display: { md: 'block', sm: 'block', xs: 'none' }, fontSize: '1.2rem', border: 'none' }}>{data[0]}&nbsp;&nbsp;&nbsp;<strong>{data[1]}</strong></TableCell>
+                                <TableCell style={{ fontSize: '1.2rem', border: 'none' }}>
+                                    <a href={data[2]}>
+                                        {data[3]}
+                                    </a>
+                                </TableCell>
+                            </TableRow>
+                        </>
+                    ))}
                 </TableBody>
             </Table>
         </TableContainer>
