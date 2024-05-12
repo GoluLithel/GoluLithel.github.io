@@ -1,11 +1,14 @@
+import resumeFile from '../resources/resume/resume.pdf';
+
 export async function handleShareResume() {
   if (navigator.share) {
-    const response = await fetch('../../resources/resume/resume.pdf');
+    const response = await fetch(resumeFile);
     const blob = await response.blob();
     const pdfFile = new File([blob], 'bhogendra_resume.pdf', { type: 'application/pdf' });
 
-    navigator.share({
+    await navigator.share({
       title: 'Bhogendra\'s Resume',
+      text: 'Resume of Bhogendra',
       files: [pdfFile]
     })
       .then(() => console.log('Successful share'))
@@ -15,7 +18,7 @@ export async function handleShareResume() {
   }
 }
 
-export async function handleShareLink() {
+export function handleShareLink() {
   if (navigator.share) {
     navigator.share({
       title: 'Bhogendra Kamble',

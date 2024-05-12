@@ -35,7 +35,7 @@ export default function DrawerList({ handleChangePanel, toggleSuccessPopUp, togg
         <DrawerItem text="Download Resume" onClickItem={handleDownloadClick}>
           <FileDownloadIcon />
         </DrawerItem>
-        <DrawerItem text="Share Resume" onClickItem={handleShareResume}>
+        <DrawerItem text="Share Resume" onClickItem={async () => await handleShareResume()}>
           <ShareIcon />
         </DrawerItem>
         <DrawerItem text="Share Link" onClickItem={handleShareLink}>

@@ -5,10 +5,7 @@ import CurrentSection from './components/sections/CurrentSection';
 function App() {
 
   const [activePanel, setActivePanel] = useState('Home');
-
-  const handleChangePanel = (panel) => {
-    setActivePanel(panel);
-  };
+  const handleChangePanel = panel => setActivePanel(panel);
 
   return (
     <>

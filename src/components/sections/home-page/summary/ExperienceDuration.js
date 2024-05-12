@@ -14,6 +14,7 @@ const ExperienceDuration = () => {
       clearInterval(timer);
     };
   }, []);
+
   return (
     <>{Object.entries(currentDuration)
       .filter((element) => {
