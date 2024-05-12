@@ -10,11 +10,11 @@ import { handleShareResume, handleShareLink } from '../../utils/handleShare';
 import DrawerItem from './drawer-items/DrawerItem';
 import handleDownload from '../../utils/handleDownload';
 
-export default function DrawerList({ handleChangePanel, toggleDownloadPopup, toggleDrawer, pages }) {
+export default function DrawerList({ handleChangePanel, toggleSuccessPopUp, toggleDrawer, pages }) {
 
   const handleDownloadClick = () => {
     handleDownload();
-    toggleDownloadPopup();
+    toggleSuccessPopUp();
   }
 
   return (

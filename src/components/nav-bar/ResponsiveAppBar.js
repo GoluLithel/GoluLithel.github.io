@@ -16,7 +16,7 @@ import WorkspacePremiumIcon from '@mui/icons-material/WorkspacePremium';
 import FeaturedPlayListIcon from '@mui/icons-material/FeaturedPlayList';
 import CallIcon from '@mui/icons-material/Call';
 import './ResponsiveAppBar.css';
-import DownloadDialog from '../../components/pop-ups/DownloadDialog';
+import SuccessDialog from '../pop-ups/SuccessDialog';
 import GratitudeDialog from '../pop-ups/GratitudeDialog';
 
 const pages = [
@@ -32,14 +32,14 @@ const pages = [
 function ResponsiveAppBar({ activePanel, handleChangePanel }) {
 
   const [isDrawerOpen, setDrawerOpen] = useState(false);
-  const [isDownloadPopUp, setDownloadPopUp] = useState(false);
+  const [isSuccessPopUp, setSuccessPopUp] = useState(false);
   const [isGratitudePopUp, setGratitudePopUp] = useState(false);
 
-  const toggleDownloadPopup = () => setDownloadPopUp(!isDownloadPopUp);
+  const toggleSuccessPopUp = () => setSuccessPopUp(!isSuccessPopUp);
   const toggleGratitudePopup = () => setGratitudePopUp(!isGratitudePopUp);
   const toggleDrawer = () => setDrawerOpen(!isDrawerOpen);
 
-  const drawerProps = { isDrawerOpen, handleChangePanel, toggleDownloadPopup, toggleDrawer, pages };
+  const drawerProps = { isDrawerOpen, handleChangePanel, toggleSuccessPopUp, toggleDrawer, pages };
 
   return (
     <>
@@ -66,8 +66,8 @@ function ResponsiveAppBar({ activePanel, handleChangePanel }) {
             <Box sx={{ display: { xs: 'flex', sm: 'none', md: 'none' }, mr: 1 }} onClick={toggleGratitudePopup}>
               <EmojiEmotionsIcon className='spin-animation' />
             </Box>
-            <Box sx={{ flexGrow: 1, display: { xs: 'flex', sm: 'none', md: 'none' }, mr: 2 }}>
-              <NameHeading handleChangePanel={handleChangePanel} />
+            <Box sx={{ flexGrow: 1, display: { xs: 'flex', sm: 'none', md: 'none' }, mr: 2 }} onClick={() => handleChangePanel('Home')}>
+              <NameHeading>BHOGENDRA</NameHeading>
             </Box>
 
             {/* This will display if screen is small & large */}
@@ -77,7 +77,10 @@ function ResponsiveAppBar({ activePanel, handleChangePanel }) {
           </Toolbar>
         </Container>
       </AppBar>
-      <DownloadDialog isDownloadPopUp={isDownloadPopUp} toggleDownloadPopup={toggleDownloadPopup} />
+      <SuccessDialog isOpen={isSuccessPopUp} togglePopUp={toggleSuccessPopUp}>
+        Thank you for your interest!<br />
+        Your download has started successfully.
+      </SuccessDialog>
       <GratitudeDialog isGratitudePopUp={isGratitudePopUp} toggleGratitudePopup={toggleGratitudePopup} handleChangePanel={handleChangePanel} />
     </>
   );
