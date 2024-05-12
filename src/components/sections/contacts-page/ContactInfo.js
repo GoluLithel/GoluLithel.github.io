@@ -1,4 +1,4 @@
-import { FaPhoneAlt, FaEnvelope, FaGithub, FaLinkedin } from 'react-icons/fa';
+import { FaPhoneAlt, FaEnvelope, FaGithub, FaLinkedin, FaWhatsapp } from 'react-icons/fa';
 import Table from '@mui/material/Table';
 import TableBody from '@mui/material/TableBody';
 import TableCell from '@mui/material/TableCell';
@@ -7,7 +7,7 @@ import TableRow from '@mui/material/TableRow';
 
 export default function ContactInfo() {
     const contactDetails = [
-        [<FaPhoneAlt />, ' Mobile Number:', 'tel:+918600258253', '+91 8600258253'],
+        [<FaWhatsapp />, ' Mobile Number (WhatsApp):', 'tel:+918600258253', '+91 8600258253'],
         [<FaPhoneAlt />, ' Alternate Mobile Number:', 'tel:+918668398733', '+91 8668398733'],
         [<FaEnvelope />, ' Email Id:', 'mailto:golukamble123@gmail.com', 'golukamble123@gmail.com'],
         [<FaGithub />, ' GitHub Profile:', 'https://github.com/GoluLithel', 'github.com/GoluLithel'],

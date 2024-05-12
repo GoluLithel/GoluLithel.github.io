@@ -2,7 +2,7 @@ import Drawer from '@mui/material/Drawer';
 import DrawerList from '../drawer/DrawerList';
 import DrawerButton from '../drawer/DrawerButton';
 
-export default function DrawerPanel({ isDrawerOpen, handleChangePanel, toggleSuccessPopUp, toggleDrawer, pages }) {
+export default function DrawerPanel({ isDrawerOpen, handleChangePanel, toggleSuccessPopUp, toggleDrawer, toggleSharePopUp, pages }) {
     return (
         <>
             <DrawerButton toggleDrawer={toggleDrawer} />
@@ -11,6 +11,7 @@ export default function DrawerPanel({ isDrawerOpen, handleChangePanel, toggleSuc
                     handleChangePanel={handleChangePanel}
                     toggleSuccessPopUp={toggleSuccessPopUp}
                     toggleDrawer={toggleDrawer}
+                    toggleSharePopUp={toggleSharePopUp}
                     pages={pages} />
             </Drawer>
         </>

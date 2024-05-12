@@ -18,6 +18,7 @@ import CallIcon from '@mui/icons-material/Call';
 import './ResponsiveAppBar.css';
 import SuccessDialog from '../pop-ups/SuccessDialog';
 import GratitudeDialog from '../pop-ups/GratitudeDialog';
+import ShareDialog from '../pop-ups/ShareDialog';
 
 const pages = [
   ['Home', <HomeIcon />],
@@ -34,12 +35,14 @@ function ResponsiveAppBar({ activePanel, handleChangePanel }) {
   const [isDrawerOpen, setDrawerOpen] = useState(false);
   const [isSuccessPopUp, setSuccessPopUp] = useState(false);
   const [isGratitudePopUp, setGratitudePopUp] = useState(false);
+  const [isSharePopUpOpen, setSharePopUp] = useState(false);
 
   const toggleSuccessPopUp = () => setSuccessPopUp(!isSuccessPopUp);
   const toggleGratitudePopup = () => setGratitudePopUp(!isGratitudePopUp);
   const toggleDrawer = () => setDrawerOpen(!isDrawerOpen);
+  const toggleSharePopUp = () => setSharePopUp(!isSharePopUpOpen);
 
-  const drawerProps = { isDrawerOpen, handleChangePanel, toggleSuccessPopUp, toggleDrawer, pages };
+  const drawerProps = { isDrawerOpen, handleChangePanel, toggleSuccessPopUp, toggleDrawer, toggleSharePopUp, pages };
 
   return (
     <>
@@ -81,6 +84,7 @@ function ResponsiveAppBar({ activePanel, handleChangePanel }) {
         Thank you for your interest!<br />
         Your download has started successfully.
       </SuccessDialog>
+      <ShareDialog isSharePopUpOpen={isSharePopUpOpen} toggleSharePopUp={toggleSharePopUp} />
       <GratitudeDialog isGratitudePopUp={isGratitudePopUp} toggleGratitudePopup={toggleGratitudePopup} handleChangePanel={handleChangePanel} />
     </>
   );

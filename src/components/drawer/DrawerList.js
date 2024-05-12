@@ -6,11 +6,10 @@ import Avatar from '@mui/material/Avatar';
 import avatarImage from '../../resources/profile-photo.png';
 import FileDownloadIcon from '@mui/icons-material/FileDownload';
 import ShareIcon from '@mui/icons-material/Share';
-import { handleShareResume, handleShareLink } from '../../utils/handleShare';
 import DrawerItem from './drawer-items/DrawerItem';
 import handleDownload from '../../utils/handleDownload';
 
-export default function DrawerList({ handleChangePanel, toggleSuccessPopUp, toggleDrawer, pages }) {
+export default function DrawerList({ handleChangePanel, toggleSuccessPopUp, toggleDrawer, toggleSharePopUp, pages }) {
 
   const handleDownloadClick = () => {
     handleDownload();
@@ -35,10 +34,7 @@ export default function DrawerList({ handleChangePanel, toggleSuccessPopUp, togg
         <DrawerItem text="Download Resume" onClickItem={handleDownloadClick}>
           <FileDownloadIcon />
         </DrawerItem>
-        <DrawerItem text="Share Resume" onClickItem={async () => await handleShareResume()}>
-          <ShareIcon />
-        </DrawerItem>
-        <DrawerItem text="Share Link" onClickItem={handleShareLink}>
+        <DrawerItem text="Share" onClickItem={toggleSharePopUp}>
           <ShareIcon />
         </DrawerItem>
       </List>
