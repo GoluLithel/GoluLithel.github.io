@@ -1,12 +1,11 @@
 {
   "files": {
     "main.css": "/static/css/main.910ad0d5.css",
-    "main.js": "/static/js/main.929a3dd0.js",
+    "main.js": "/static/js/main.052dafce.js",
     "static/js/453.864333e8.chunk.js": "/static/js/453.864333e8.chunk.js",
     "static/media/etherium.png": "/static/media/etherium.ef588ac4d85b0994e1a7.png",
     "static/media/profile-photo.png": "/static/media/profile-photo.3609db09514e704f5072.png",
     "static/media/kubernetes.png": "/static/media/kubernetes.b17478e8c42bbd354aa1.png",
-    "static/media/resume.pdf": "/static/media/resume.562185977108931ef589.pdf",
     "static/media/trello.png": "/static/media/trello.9fadcb8d8b155b422076.png",
     "static/media/nestjs.png": "/static/media/nestjs.3fe99b9f447df51c3c42.png",
     "static/media/python.png": "/static/media/python.25f6415ce8fb07e57fac.png",
@@ -33,11 +32,11 @@
     "static/media/cbdeLogo.png": "/static/media/cbdeLogo.133a37c741e74e17bc05.png",
     "index.html": "/index.html",
     "main.910ad0d5.css.map": "/static/css/main.910ad0d5.css.map",
-    "main.929a3dd0.js.map": "/static/js/main.929a3dd0.js.map",
+    "main.052dafce.js.map": "/static/js/main.052dafce.js.map",
     "453.864333e8.chunk.js.map": "/static/js/453.864333e8.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.910ad0d5.css",
-    "static/js/main.929a3dd0.js"
+    "static/js/main.052dafce.js"
   ]
 }
