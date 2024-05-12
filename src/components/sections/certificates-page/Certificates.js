@@ -6,7 +6,6 @@ import awsLogo from '../../../resources/certificates-logo/awsLogo.png';
 import cbdeLogo from '../../../resources/certificates-logo/cbdeLogo.png';
 
 export default function Certificates() {
-  // let border = 'solid white 1px';
 
   return (
     <React.Fragment>

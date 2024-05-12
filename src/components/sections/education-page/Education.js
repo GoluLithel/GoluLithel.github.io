@@ -4,7 +4,6 @@ import CssBaseline from '@mui/material/CssBaseline';
 import Container from '@mui/material/Container';
 
 export default function Education() {
-  // let border = 'solid white 1px';
 
   return (
     <React.Fragment>

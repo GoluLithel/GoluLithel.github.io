@@ -2,11 +2,11 @@ import Dialog from '@mui/material/Dialog';
 import Alert from '@mui/material/Alert';
 import CheckIcon from '@mui/icons-material/Check';
 
-export default function DownloadDialog({ open, handleDownloadClose }) {
+export default function DownloadDialog({ isDownloadPopUp, toggleDownloadPopup }) {
   return (
     <Dialog
-      open={open}
-      onClose={handleDownloadClose}
+      open={isDownloadPopUp}
+      onClose={toggleDownloadPopup}
       aria-labelledby="alert-dialog-title"
       aria-describedby="alert-dialog-description"
     >

@@ -1,4 +1,4 @@
-import * as React from 'react';
+import { useState } from 'react';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
@@ -16,6 +16,8 @@ import WorkspacePremiumIcon from '@mui/icons-material/WorkspacePremium';
 import FeaturedPlayListIcon from '@mui/icons-material/FeaturedPlayList';
 import CallIcon from '@mui/icons-material/Call';
 import './ResponsiveAppBar.css';
+import DownloadDialog from '../../components/pop-ups/DownloadDialog';
+import GratitudeDialog from '../pop-ups/GratitudeDialog';
 
 const pages = [
   ['Home', <HomeIcon />],
@@ -27,10 +29,17 @@ const pages = [
   ['Contacts', <CallIcon />],
 ];
 
-function ResponsiveAppBar({ activePanel, handleChangePanel, handleDownloadOpen, handleGratitudeOpen }) {
+function ResponsiveAppBar({ activePanel, handleChangePanel }) {
 
-  const [open, setOpen] = React.useState(false);
-  const toggleDrawer = (newOpen) => setOpen(newOpen);
+  const [isDrawerOpen, setDrawerOpen] = useState(false);
+  const [isDownloadPopUp, setDownloadPopUp] = useState(false);
+  const [isGratitudePopUp, setGratitudePopUp] = useState(false);
+
+  const toggleDownloadPopup = () => setDownloadPopUp(!isDownloadPopUp);
+  const toggleGratitudePopup = () => setGratitudePopUp(!isGratitudePopUp);
+  const toggleDrawer = () => setDrawerOpen(!isDrawerOpen);
+
+  const drawerProps = { isDrawerOpen, handleChangePanel, toggleDownloadPopup, toggleDrawer, pages };
 
   return (
     <>
@@ -40,31 +49,21 @@ function ResponsiveAppBar({ activePanel, handleChangePanel, handleDownloadOpen, 
 
             {/* This will display if screen is large */}
             <Box sx={{ display: { xs: 'none', sm: 'flex', md: 'flex' }, mr: 1 }}>
-              <DrawerPanel
-                open={open}
-                handleChangePanel={handleChangePanel}
-                handleDownloadOpen={handleDownloadOpen}
-                toggleDrawer={toggleDrawer}
-                pages={pages} />
+              <DrawerPanel {...drawerProps} />
             </Box>
-            <Box sx={{ display: { xs: 'none', sm: 'flex', md: 'flex' }, mr: 2 }} onClick={handleGratitudeOpen}>
+            <Box sx={{ display: { xs: 'none', sm: 'flex', md: 'flex' }, mr: 2 }} onClick={toggleGratitudePopup}>
               <EmojiEmotionsIcon className='spin-animation' />
             </Box>
-            <Box sx={{ display: { xs: 'none', sm: 'flex', md: 'flex' }, mr: 3 }}>
-              <NameHeading handleChangePanel={handleChangePanel} />
+            <Box sx={{ display: { xs: 'none', sm: 'flex', md: 'flex' }, mr: 3 }} onClick={() => handleChangePanel('Home')}>
+              <NameHeading>BHOGENDRA</NameHeading>
             </Box>
             <MenuButtons pages={pages} activePanel={activePanel} handleChangePanel={handleChangePanel} />
 
             {/* This will display if screen is small */}
             <Box sx={{ flexGrow: 1, display: { xs: 'flex', sm: 'none', md: 'none' } }}>
-              <DrawerPanel
-                open={open}
-                handleChangePanel={handleChangePanel}
-                handleDownloadOpen={handleDownloadOpen}
-                toggleDrawer={toggleDrawer}
-                pages={pages} />
+              <DrawerPanel {...drawerProps} />
             </Box>
-            <Box sx={{ display: { xs: 'flex', sm: 'none', md: 'none' }, mr: 1 }} onClick={handleGratitudeOpen}>
+            <Box sx={{ display: { xs: 'flex', sm: 'none', md: 'none' }, mr: 1 }} onClick={toggleGratitudePopup}>
               <EmojiEmotionsIcon className='spin-animation' />
             </Box>
             <Box sx={{ flexGrow: 1, display: { xs: 'flex', sm: 'none', md: 'none' }, mr: 2 }}>
@@ -78,6 +77,8 @@ function ResponsiveAppBar({ activePanel, handleChangePanel, handleDownloadOpen, 
           </Toolbar>
         </Container>
       </AppBar>
+      <DownloadDialog isDownloadPopUp={isDownloadPopUp} toggleDownloadPopup={toggleDownloadPopup} />
+      <GratitudeDialog isGratitudePopUp={isGratitudePopUp} toggleGratitudePopup={toggleGratitudePopup} handleChangePanel={handleChangePanel} />
     </>
   );
 }

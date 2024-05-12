@@ -6,14 +6,19 @@ import Avatar from '@mui/material/Avatar';
 import avatarImage from '../../resources/profile-photo.png';
 import FileDownloadIcon from '@mui/icons-material/FileDownload';
 import ShareIcon from '@mui/icons-material/Share';
-import resumeUrl from '../../resources/resume/resume.pdf';
 import { handleShareResume, handleShareLink } from '../../utils/handleShare';
 import DrawerItem from './drawer-items/DrawerItem';
+import handleDownload from '../../utils/handleDownload';
 
-export default function DrawerList({ handleChangePanel, handleDownloadOpen, toggleDrawer, pages }) {
+export default function DrawerList({ handleChangePanel, toggleDownloadPopup, toggleDrawer, pages }) {
+
+  const handleDownloadClick = () => {
+    handleDownload();
+    toggleDownloadPopup();
+  }
 
   return (
-    <Box sx={{ width: 250 }} role="presentation" onClick={() => toggleDrawer(false)}>
+    <Box sx={{ width: 250 }} role="presentation" onClick={toggleDrawer}>
       <List>
         <DrawerItem text="Bhogendra" onClickItem={() => handleChangePanel('PersonalProfile')}>
           <Avatar src={avatarImage} />
@@ -22,20 +27,14 @@ export default function DrawerList({ handleChangePanel, handleDownloadOpen, togg
       <Divider />
       <List>
         {pages.map(([text, icon]) => {
-          return (
-            <DrawerItem text={text} onClickItem={() => handleChangePanel(text)}>
-              {icon}
-            </DrawerItem>
-          );
+          return (<DrawerItem text={text} onClickItem={() => handleChangePanel(text)}>{icon}</DrawerItem>);
         })}
       </List>
       <Divider />
       <List>
-        <a href={resumeUrl} style={{ textDecoration: 'none', color: 'inherit' }} download="Resume_BhogendraKamble.pdf">
-          <DrawerItem text="Download Resume" onClickItem={handleDownloadOpen}>
-            <FileDownloadIcon />
-          </DrawerItem>
-        </a>
+        <DrawerItem text="Download Resume" onClickItem={handleDownloadClick}>
+          <FileDownloadIcon />
+        </DrawerItem>
         <DrawerItem text="Share Resume" onClickItem={handleShareResume}>
           <ShareIcon />
         </DrawerItem>

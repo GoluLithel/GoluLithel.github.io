@@ -8,7 +8,7 @@ export default function DrawerButton({ toggleDrawer }) {
             aria-label="account of current user"
             aria-controls="menu-appbar"
             aria-haspopup="true"
-            onClick={() => toggleDrawer(true)}
+            onClick={toggleDrawer}
             color="inherit"
         >
             <MenuIcon />

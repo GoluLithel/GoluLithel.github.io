@@ -1,9 +1,8 @@
 import Typography from '@mui/material/Typography';
 
-export default function NameHeading({ handleChangePanel }) {
+export default function NameHeading({ children }) {
   return (
     <Typography
-      onClick={() => handleChangePanel('Home')}
       variant="h6"
       noWrap
       component="a"
@@ -17,7 +16,7 @@ export default function NameHeading({ handleChangePanel }) {
         textDecoration: 'none',
       }}
     >
-      BHOGENDRA
+      {children}
     </Typography>
   );
 }
