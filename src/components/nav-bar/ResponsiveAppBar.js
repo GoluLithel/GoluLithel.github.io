@@ -15,7 +15,7 @@ import HandymanIcon from '@mui/icons-material/Handyman';
 import WorkspacePremiumIcon from '@mui/icons-material/WorkspacePremium';
 import FeaturedPlayListIcon from '@mui/icons-material/FeaturedPlayList';
 import CallIcon from '@mui/icons-material/Call';
-import './ResponsiveAppBar.css';
+import '../../style/ResponsiveAppBar.css';
 import SuccessDialog from '../pop-ups/SuccessDialog';
 import GratitudeDialog from '../pop-ups/GratitudeDialog';
 import ShareDialog from '../pop-ups/ShareDialog';

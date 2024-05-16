@@ -1,5 +1,5 @@
 import Avatar from '@mui/material/Avatar';
-import avatarImage from '../../resources/profile-photo.png';
+import avatarImage from '../../assets/profile-photo.png';
 import Tooltip from '@mui/material/Tooltip';
 import Zoom from '@mui/material/Zoom';
 import IconButton from '@mui/material/IconButton';

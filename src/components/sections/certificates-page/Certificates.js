@@ -2,8 +2,8 @@ import * as React from 'react';
 import Box from '@mui/material/Box';
 import CssBaseline from '@mui/material/CssBaseline';
 import Container from '@mui/material/Container';
-import awsLogo from '../../../resources/certificates-logo/awsLogo.png';
-import cbdeLogo from '../../../resources/certificates-logo/cbdeLogo.png';
+import awsLogo from '../../../assets/certificates-logo/awsLogo.png';
+import cbdeLogo from '../../../assets/certificates-logo/cbdeLogo.png';
 
 export default function Certificates() {
 

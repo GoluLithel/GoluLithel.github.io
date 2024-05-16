@@ -3,62 +3,10 @@ import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
 import CssBaseline from '@mui/material/CssBaseline';
 import Container from '@mui/material/Container';
-import angular from '../../../resources/skills/angular.png';
-import bootstrap from '../../../resources/skills/bootstrap.png';
-import cpp from '../../../resources/skills/c++.png';
-import couchdb from '../../../resources/skills/couchdb.png';
-import css from '../../../resources/skills/css.png';
-import docker from '../../../resources/skills/docker.png';
-import dockerCompose from '../../../resources/skills/docker-compose.png';
-import etherium from '../../../resources/skills/etherium.png';
-import expressjs from '../../../resources/skills/expressjs.png';
-import git from '../../../resources/skills/git.png';
-import html from '../../../resources/skills/html.png';
-import hyperledger from '../../../resources/skills/hyperledger.png';
-import java from '../../../resources/skills/java.png';
-import javascript from '../../../resources/skills/javascript.png';
-import jira from '../../../resources/skills/jira.png';
-import kubernetes from '../../../resources/skills/kubernetes.png';
-import mangodb from '../../../resources/skills/mangodb.png';
-import materialUI from '../../../resources/skills/material-ui.png';
-import mysql from '../../../resources/skills/mysql.png';
-import nestjs from '../../../resources/skills/nestjs.png';
-import nodejs from '../../../resources/skills/nodejs.png';
-import python from '../../../resources/skills/python.png';
-import react from '../../../resources/skills/react.png';
-import trello from '../../../resources/skills/trello.png';
-import typescript from '../../../resources/skills/typescript.png';
+import { skillSet } from '../../../data/skillSet';
 
 export default function Skills() {
   let border = '';
-
-  const skills = [
-    ['Node.js', nodejs],
-    ['React.js', react],
-    ['Angular', angular],
-    ['Nest.js', nestjs],
-    ['Express.js', expressjs],
-    ['Java Script', javascript],
-    ['Type Script', typescript],
-    ['HTML', html],
-    ['CSS', css],
-    ['Java', java],
-    ['Python', python],
-    ['C++', cpp],
-    ['MangoDB', mangodb],
-    ['CouchDB', couchdb],
-    ['My SQL', mysql],
-    ['Docker', docker],
-    ['Docker Compose', dockerCompose],
-    ['Kubernetes', kubernetes],
-    ['Bootstrap', bootstrap],
-    ['Material UI', materialUI],
-    ['Etherium', etherium],
-    ['Hyperledger', hyperledger],
-    ['Git', git],
-    ['Jira', jira],
-    ['Trell', trello],
-  ];
 
   return (
     <React.Fragment>
@@ -71,7 +19,7 @@ export default function Skills() {
             </Box>
           </Grid>
 
-          {skills.map((element) => (
+          {skillSet.map((element) => (
             <Grid md={2} sm={3} xs={4} sx={{ display: 'block', border: border }}>
               <Box sx={{
                 display: 'grid',

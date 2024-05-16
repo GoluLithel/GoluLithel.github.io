@@ -1,6 +1,6 @@
 import React from 'react';
 import { useSpring, animated } from 'react-spring';
-import profilePic from '../../../../resources/profile-photo.png';
+import profilePic from '../../../../assets/profile-photo.png';
 
 const AnimatedPic = ({ width }) => {
 

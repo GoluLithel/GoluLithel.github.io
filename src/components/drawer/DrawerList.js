@@ -3,7 +3,7 @@ import Box from '@mui/material/Box';
 import List from '@mui/material/List';
 import Divider from '@mui/material/Divider';
 import Avatar from '@mui/material/Avatar';
-import avatarImage from '../../resources/profile-photo.png';
+import avatarImage from '../../assets/profile-photo.png';
 import FileDownloadIcon from '@mui/icons-material/FileDownload';
 import ShareIcon from '@mui/icons-material/Share';
 import DrawerItem from './drawer-items/DrawerItem';

@@ -1,4 +1,4 @@
-import resumeFile from '../resources/resume/resume.pdf';
+import resumeFile from '../assets/resume/resume.pdf';
 
 export async function handleShareResume() {
   if (navigator.share) {
