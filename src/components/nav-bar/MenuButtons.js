@@ -6,7 +6,7 @@ export default function MenuButtons({ pages, activePanel, handleChangePanel }) {
   return (<Box sx={{ flexGrow: 1, display: { xs: 'none', sm: 'flex', md: 'flex' } }}>
     {pages.map(([page], index) => (
       <Button
-        variant={(page === activePanel) && 'contained'}
+        variant={(page === activePanel) ? 'contained' : 'text'}
         key={index}
         onClick={() => handleChangePanel(page)}
         sx={{

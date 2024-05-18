@@ -1,6 +1,8 @@
+import resumeLink from '../assets/resume/resume.pdf';
+
 export default function handleDownload() {
   const anchor = document.createElement('a');
-  anchor.href = '../resources/resume/resume.pdf';
+  anchor.href = resumeLink;
   anchor.download = 'Resume_BhogendraKamble.pdf';
   document.body.appendChild(anchor);
   anchor.click();

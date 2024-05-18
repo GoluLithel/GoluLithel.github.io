@@ -13,14 +13,14 @@ export default function Skills() {
       <CssBaseline />
       <Container sx={{ padding: '5vmin', minHeight: '100vh', width: '90%' }}>
         <Grid container>
-          <Grid md={12} sm={12} xs={12} sx={{ display: { xs: 'block', sm: 'block', md: 'block' }, border: border }}>
+          <Grid key='skills' item={true} md={12} sm={12} xs={12} sx={{ display: { xs: 'block', sm: 'block', md: 'block' }, border: border }}>
             <Box style={{ display: 'grid', placeItems: 'center', width: '100%' }}>
               <h1>Skills</h1>
             </Box>
           </Grid>
 
           {skillSet.map((element) => (
-            <Grid md={2} sm={3} xs={4} sx={{ display: 'block', border: border }}>
+            <Grid key={element[0]} item={true} md={2} sm={3} xs={4} sx={{ display: 'block', border: border }}>
               <Box sx={{
                 display: 'grid',
                 border: border,

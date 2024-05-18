@@ -16,19 +16,20 @@ const ExperienceDuration = () => {
   }, []);
 
   return (
-    <>{Object.entries(currentDuration)
+    <span key='experienceDuration'>{Object.entries(currentDuration)
       .filter((element) => {
         return element[1] !== 0;
       })
       .map((element, index, array) => {
         if (index === array.length - 1) {
           if (index === 0) {
-            return <>{element[1]} {element[0]}</>
+            return <span key={'time' + element[1] + element[0]}>{element[1]} {element[0]}</span>
           }
-          return <>and {element[1]} {element[0]}</>
+          return <span key={'timeAnd' + element[1] + element[0]}>and {element[1]} {element[0]}</span>
         }
-        return <>{element[1]} {element[0]}, </>
-      })}</>
+        return <span key={'time' + element[1] + element[0]}>{element[1]} {element[0]}, </span>
+      })}
+    </span>
   );
 };
 

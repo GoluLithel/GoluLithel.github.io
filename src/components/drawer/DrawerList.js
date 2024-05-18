@@ -13,7 +13,13 @@ export default function DrawerList({ handleChangePanel, toggleSuccessPopUp, togg
 
   const handleDownloadClick = () => {
     handleDownload();
-    toggleSuccessPopUp();
+    // toggleSuccessPopUp();
+    // const anchor = document.createElement('a');
+    // anchor.href = resumeLink;
+    // anchor.download = 'resume123.pdf';
+    // document.body.appendChild(anchor);
+    // anchor.click();
+    // document.body.removeChild(anchor);
   }
 
   return (
@@ -26,14 +32,16 @@ export default function DrawerList({ handleChangePanel, toggleSuccessPopUp, togg
       <Divider />
       <List>
         {pages.map(([text, icon]) => {
-          return (<DrawerItem text={text} onClickItem={() => handleChangePanel(text)}>{icon}</DrawerItem>);
+          return (<DrawerItem key={text} text={text} onClickItem={() => handleChangePanel(text)}>{icon}</DrawerItem>);
         })}
       </List>
       <Divider />
       <List>
+        {/* <a href={resumeLink} download={'pic.pdf'}> */}
         <DrawerItem text="Download Resume" onClickItem={handleDownloadClick}>
           <FileDownloadIcon />
         </DrawerItem>
+        {/* </a> */}
         <DrawerItem text="Share" onClickItem={toggleSharePopUp}>
           <ShareIcon />
         </DrawerItem>

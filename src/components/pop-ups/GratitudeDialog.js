@@ -21,7 +21,7 @@ export default function GratitudeDialog({ isGratitudePopUp, toggleGratitudePopup
     aria-describedby="alert-dialog-description"
   >
     <DialogTitle sx={{ m: 0, p: 2 }} id="customized-dialog-title">
-      Thank you Visitor!!
+      😄 Thank you Visitor!!
     </DialogTitle>
     <IconButton
       aria-label="close"

@@ -1,4 +1,5 @@
 import resumeFile from '../assets/resume/resume.pdf';
+import profileIcon from '../assets/profile-photo.png';
 
 export async function handleShareResume() {
   if (navigator.share) {
@@ -24,7 +25,7 @@ export function handleShareLink() {
       title: 'Bhogendra Kamble',
       text: 'Personal Portfolio of Bhogendra',
       url: 'https://golulithel.github.io/',
-      icon: '../../resources/profile-photo.png',
+      icon: profileIcon,
     })
       .then(() => console.log('Successful share'))
       .catch((error) => console.log('Error sharing:', error));
