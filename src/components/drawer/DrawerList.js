@@ -13,13 +13,7 @@ export default function DrawerList({ handleChangePanel, toggleSuccessPopUp, togg
 
   const handleDownloadClick = () => {
     handleDownload();
-    // toggleSuccessPopUp();
-    // const anchor = document.createElement('a');
-    // anchor.href = resumeLink;
-    // anchor.download = 'resume123.pdf';
-    // document.body.appendChild(anchor);
-    // anchor.click();
-    // document.body.removeChild(anchor);
+    toggleSuccessPopUp();
   }
 
   return (
