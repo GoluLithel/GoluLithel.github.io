@@ -49,5 +49,5 @@ export const skillSet = [
   ['Hyperledger', hyperledger],
   ['Git', git],
   ['Jira', jira],
-  ['Trell', trello],
+  ['Trello', trello],
 ];

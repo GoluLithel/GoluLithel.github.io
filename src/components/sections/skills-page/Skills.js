@@ -5,6 +5,16 @@ import CssBaseline from '@mui/material/CssBaseline';
 import Container from '@mui/material/Container';
 import { skillSet } from '../../../data/skillSet';
 
+function getLogoWidth(logo) {
+  if (logo === 'Express.js' || logo === 'C++') {
+    return '80%';
+  } else if (logo === 'My SQL') {
+    return '60%';
+  } else {
+    return '45%';
+  }
+}
+
 export default function Skills() {
   let border = '';
 
@@ -33,7 +43,14 @@ export default function Skills() {
                 boxShadow: '0px 0px 2px rgba(0, 0, 0, 0.5)',
                 padding: '5%',
               }}>
-                <img style={{ width: '45%', border: border, placeItems: 'center center' }} src={element[1]} alt={element[0]} />
+                <img
+                  style={{
+                    width: getLogoWidth(element[0]),
+                    border: border,
+                    placeItems: 'center center',
+                  }}
+                  src={element[1]}
+                  alt={element[0]} />
                 <p style={{ textAlign: 'center' }}>{element[0]}</p>
               </Box>
             </Grid>

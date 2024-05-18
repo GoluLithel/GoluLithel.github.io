@@ -31,11 +31,9 @@ export default function DrawerList({ handleChangePanel, toggleSuccessPopUp, togg
       </List>
       <Divider />
       <List>
-        {/* <a href={resumeLink} download={'pic.pdf'}> */}
         <DrawerItem text="Download Resume" onClickItem={handleDownloadClick}>
           <FileDownloadIcon />
         </DrawerItem>
-        {/* </a> */}
         <DrawerItem text="Share" onClickItem={toggleSharePopUp}>
           <ShareIcon />
         </DrawerItem>
