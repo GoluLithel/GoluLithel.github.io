@@ -4,6 +4,9 @@ import profileIcon from '../assets/profile-photo.png';
 export async function handleShareResume() {
   if (navigator.share) {
     const response = await fetch(resumeFile);
+    if (!response.ok) {
+      console.log('Error while fetching resume.');
+    }
     const blob = await response.blob();
     const pdfFile = new File([blob], 'bhogendra_resume.pdf', { type: 'application/pdf' });
 

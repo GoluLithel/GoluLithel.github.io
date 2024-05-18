@@ -47,8 +47,8 @@ export default function ShareDialog({ isSharePopUpOpen, toggleSharePopUp }) {
       <CloseIcon />
     </IconButton>
     <DialogContent dividers>
-      <Grid sx={{ width: '90%', marginLeft: '5%', marginRigth: '5%', border: border, alignItems: 'center center' }}>
-        <Grid container sx={{ width: '100%', border: border }}>
+      <Grid item={true} sx={{ width: '90%', marginLeft: '5%', marginRigth: '5%', border: border, alignItems: 'center center' }}>
+        <Grid container item={true} sx={{ width: '100%', border: border }}>
           <ShareCard onClick={handleShareResume}>
             <img style={{ width: '70%', placeItems: 'center center' }} src={resumeIcon} alt='Resume' />
             <p style={{ textAlign: 'center', fontWeight: 'bold' }}>Resume</p>

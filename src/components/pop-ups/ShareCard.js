@@ -14,7 +14,7 @@ export default function ShareCard({ onClick, children }) {
   };
 
   return (
-    <Grid md={6} sm={6} xs={6} sx={{ display: 'block', placeItems: 'center center' }}>
+    <Grid item={true} md={6} sm={6} xs={6} sx={{ display: 'block', placeItems: 'center center' }}>
       <Box
         sx={{
           display: 'grid',
